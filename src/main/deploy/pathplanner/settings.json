@@ -1,0 +1,40 @@
+{
+  "robotWidth": 0.9,
+  "robotLength": 0.9,
+  "holonomicMode": true,
+  "pathFolders": [
+    "BlueSide",
+    "yol",
+    "Test",
+    "deneme"
+  ],
+  "autoFolders": [],
+  "defaultMaxVel": 2.0,
+  "defaultMaxAccel": 3.0,
+  "defaultMaxAngVel": 540.0,
+  "defaultMaxAngAccel": 720.0,
+  "defaultNominalVoltage": 12.0,
+  "robotMass": 30.0,
+  "robotMOI": 6.883,
+  "robotTrackwidth": 0.546,
+  "driveWheelRadius": 0.051,
+  "driveGearing": 5.6,
+  "maxDriveSpeed": 5.7,
+  "driveMotorType": "krakenX60",
+  "driveCurrentLimit": 60.0,
+  "wheelCOF": 1.1,
+  "flModuleX": 0.279,
+  "flModuleY": 0.279,
+  "frModuleX": 0.279,
+  "frModuleY": -0.279,
+  "blModuleX": -0.279,
+  "blModuleY": 0.279,
+  "brModuleX": -0.279,
+  "brModuleY": -0.279,
+  "bumperOffsetX": 0.0,
+  "bumperOffsetY": 0.0,
+  "robotFeatures": [
+    "{\"name\":\"ELEVATOR\",\"type\":\"rounded_rect\",\"data\":{\"center\":{\"x\":0.0,\"y\":0.0},\"size\":{\"width\":0.8,\"length\":0.2},\"borderRadius\":0.05,\"strokeWidth\":0.02,\"filled\":true}}",
+    "{\"name\":\"ARM\",\"type\":\"circle\",\"data\":{\"center\":{\"x\":0.2,\"y\":0.0},\"radius\":0.15,\"strokeWidth\":0.03,\"filled\":false}}"
+  ]
+}
