@@ -8,6 +8,7 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 
 import com.ctre.phoenix6.Utils;
+import com.ctre.phoenix6.swerve.SwerveRequest;
 
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.cscore.CvSource;
@@ -24,6 +25,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.LimelightHelpers; 
 
+
 public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
@@ -37,9 +39,11 @@ public class Robot extends TimedRobot {
 
   public Robot() {
     m_robotContainer = new RobotContainer();
+    SmartDashboard.putNumber("Test Velocity", 0.0);
+        SmartDashboard.putNumber("Test Acceleration", 0.0);
     
-    outputStream = CameraServer.putVideo("Limelight", 320, 240);
-    mjpegServer = new MjpegServer("LimelightServer", 5800);
+    /*outputStream = CameraServer.putVideo("Limelight", 320, 240);
+    mjpegServer = new MjpegServer("LimelightServer", 5800);*/
   }
 
   @Override
@@ -47,19 +51,18 @@ public class Robot extends TimedRobot {
     CommandScheduler.getInstance().run(); 
     //updateLimelightPose();
 
-    /*SmartDashboard.putData("Field", fieldSim);
-
+    SmartDashboard.putData("Field", fieldSim);
     SmartDashboard.putNumber("Limelight X", LimelightHelpers.getTX("limelight"));
     SmartDashboard.putNumber("Limelight Y", LimelightHelpers.getTY("limelight"));
         
-    SmartDashboard.putNumber("Limelight Distance", LimelightHelpers.getBotPoseEstimate_wpiBlue("limelight").pose.getX());
+    //SmartDashboard.putNumber("Limelight Distance", LimelightHelpers.getBotPoseEstimate_wpiBlue("limelight").pose.getX());
 
 
-    Mat image = Imgcodecs.imread("http://limelight.local:5800/stream.mjpg"); // Limelight’ın IP’sinden görüntüyü al
-        outputStream.putFrame(image);*/
+    //Mat image = Imgcodecs.imread("http://limelight.local:5800/stream.mjpg"); // Limelight’ın IP’sinden görüntüyü al
+        //outputStream.putFrame(image);
 
-        //Pose2d limelightPose = LimelightHelpers.getBotPoseEstimate_wpiBlue("limelight").pose;
-        //fieldSim.setRobotPose(limelightPose);*/
+      //Pose2d limelightPose = LimelightHelpers.getBotPoseEstimate_wpiBlue("limelight").pose;
+        //fieldSim.setRobotPose(limelightPose);
 
         
 
@@ -121,10 +124,13 @@ public class Robot extends TimedRobot {
   @Override
   public void testInit() {
     CommandScheduler.getInstance().cancelAll();
+
   }
 
   @Override
-  public void testPeriodic() {}
+  public void testPeriodic() {
+    
+  }
 
   @Override
   public void testExit() {}
@@ -136,7 +142,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void simulationPeriodic() {}
-  /*public void updateLimelightPose() {
+  public void updateLimelightPose() {
     NetworkTable limelightTable = NetworkTableInstance.getDefault().getTable("limelight");
     double[] botPose = limelightTable.getEntry("botpose").getDoubleArray(new double[6]);
 
@@ -144,5 +150,5 @@ public class Robot extends TimedRobot {
         Pose2d robotPose = new Pose2d(botPose[0], botPose[1], new Rotation2d(botPose[5]));
         fieldSim.setRobotPose(robotPose);
     }
-}*/
+}
 }

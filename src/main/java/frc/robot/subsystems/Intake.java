@@ -5,16 +5,19 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 import edu.wpi.first.wpilibj.DigitalInput;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Intake extends SubsystemBase {
     private SparkMax intakeMotor;
     private DigitalInput limitswitchcoral;
     private boolean isRunningCoralIntake = false;
+    private LED m_led;
 
 
-    public Intake() {
+    public Intake(LED led) {
         intakeMotor = new SparkMax(Constants.INTAKE_MOTOR_ID,MotorType.kBrushless);
         limitswitchcoral = new DigitalInput(Constants.INTAKECORAL_LIMIT_SWITCH_ID);
+        this.m_led = led;
     }
 
     public void ToggleCoralIntake(){
@@ -39,7 +42,7 @@ public class Intake extends SubsystemBase {
     
     public void AlgIntake(double speed){
         System.out.println("AlgIntake Calisiyor");
-        intakeMotor.set(-0.3);
+        intakeMotor.set(-1);
 
     }
 
@@ -53,7 +56,7 @@ public class Intake extends SubsystemBase {
     
     public void CoralIOandAlgOuttake(double speed){
         System.out.println("CoralIOandAlgOuttake Calisiyor");
-        intakeMotor.set(0.5);
+        intakeMotor.set(1);
     }
 
 
@@ -65,10 +68,19 @@ public class Intake extends SubsystemBase {
 
     @Override
     public void periodic() {
+        SmartDashboard.putBoolean("Coral LS", isCoralDetected());
         if (isRunningCoralIntake && isCoralDetected()) {
             stopIntake();
         }
+        if (isCoralDetected()) {
+            m_led.setGreen(); // Coral içerideyse yeşil
+        } else if (isRunningCoralIntake) {
+            m_led.blinkRed(); // Coral alınırken kırmızı yanıp sönsün
+        } else {
+            m_led.setRed(); // Boştayken kırmızı yanar
+        }
     }
+    
     
 
 

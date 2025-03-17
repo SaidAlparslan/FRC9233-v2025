@@ -3,39 +3,39 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.6551888884473915,
-        "y": 5.125337946249335
+        "x": 3.9387032276119545,
+        "y": 2.7500046875258306
       },
       "prevControl": null,
       "nextControl": {
-        "x": 3.227717570455245,
-        "y": 5.593276183263383
+        "x": 3.232894736842105,
+        "y": 2.2161184210526312
       },
       "isLocked": false,
-      "linkedName": "B11"
+      "linkedName": "B7"
     },
     {
       "anchor": {
-        "x": 1.6723496957839843,
-        "y": 7.299677113410207
+        "x": 1.6468780926482665,
+        "y": 0.7526692386597904
       },
       "prevControl": {
-        "x": 2.6574368673143427,
-        "y": 6.189590175011089
+        "x": 2.7133223684210526,
+        "y": 1.754276315789474
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "BLUESOURCE"
+      "linkedName": "bottomsource"
     }
   ],
   "rotationTargets": [],
   "constraintZones": [
     {
       "name": "hizlanma",
-      "minWaypointRelativePos": 0.0,
-      "maxWaypointRelativePos": 0.484472049689441,
+      "minWaypointRelativePos": 0,
+      "maxWaypointRelativePos": 0.4013377926421404,
       "constraints": {
-        "maxVelocity": 1.2,
+        "maxVelocity": 1.5,
         "maxAcceleration": 2.0,
         "maxAngularVelocity": 540.0,
         "maxAngularAcceleration": 720.0,
@@ -63,13 +63,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -53.53736103142317
+    "rotation": 53.0
   },
   "reversed": false,
-  "folder": "TopBlueSide",
+  "folder": "BottomBlueSide",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -59.35038449739252
+    "rotation": 58.6713071321958
   },
   "useDefaultConstraints": true
 }

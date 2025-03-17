@@ -3,37 +3,37 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 3.6551888884473915,
-        "y": 5.125337946249335
-      },
-      "prevControl": null,
-      "nextControl": {
-        "x": 3.227717570455245,
-        "y": 5.593276183263383
-      },
-      "isLocked": false,
-      "linkedName": "B11"
-    },
-    {
-      "anchor": {
         "x": 1.6723496957839843,
         "y": 7.299677113410207
       },
+      "prevControl": null,
+      "nextControl": {
+        "x": 2.6720518906301276,
+        "y": 6.229658934686372
+      },
+      "isLocked": false,
+      "linkedName": "BLUESOURCE"
+    },
+    {
+      "anchor": {
+        "x": 3.950126834450681,
+        "y": 5.289725205412957
+      },
       "prevControl": {
-        "x": 2.6574368673143427,
-        "y": 6.189590175011089
+        "x": 3.3263641964152004,
+        "y": 5.956363822454432
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "BLUESOURCE"
+      "linkedName": "B12"
     }
   ],
   "rotationTargets": [],
   "constraintZones": [
     {
-      "name": "hizlanma",
-      "minWaypointRelativePos": 0.0,
-      "maxWaypointRelativePos": 0.484472049689441,
+      "name": "yavaslama",
+      "minWaypointRelativePos": 0.6521739130434783,
+      "maxWaypointRelativePos": 1.0,
       "constraints": {
         "maxVelocity": 1.2,
         "maxAcceleration": 2.0,
@@ -47,7 +47,7 @@
   "pointTowardsZones": [],
   "eventMarkers": [
     {
-      "name": "intake",
+      "name": "L4",
       "waypointRelativePos": 0,
       "endWaypointRelativePos": null,
       "command": null
@@ -63,13 +63,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -53.53736103142317
+    "rotation": -59.35038449739252
   },
   "reversed": false,
   "folder": "TopBlueSide",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": -59.35038449739252
+    "rotation": -53.53736103142317
   },
   "useDefaultConstraints": true
 }

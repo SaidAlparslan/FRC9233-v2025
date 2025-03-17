@@ -3,29 +3,29 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 4.45575,
-        "y": 7.0865
+        "x": 3.6551888884473915,
+        "y": 5.125337946249335
       },
       "prevControl": null,
       "nextControl": {
-        "x": 3.3539999999999996,
-        "y": 6.443
+        "x": 3.227717570455245,
+        "y": 5.593276183263383
       },
       "isLocked": false,
-      "linkedName": "den2"
+      "linkedName": "B11"
     },
     {
       "anchor": {
-        "x": 5.303999999999999,
-        "y": 6.55025
+        "x": 1.6723496957839843,
+        "y": 7.299677113410207
       },
       "prevControl": {
-        "x": 4.96275,
-        "y": 6.0920000000000005
+        "x": 2.6574368673143427,
+        "y": 6.189590175011089
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "bas"
+      "linkedName": "BLUESOURCE"
     }
   ],
   "rotationTargets": [],
@@ -42,13 +42,13 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": 180.0
+    "rotation": -53.53736103142317
   },
   "reversed": false,
-  "folder": "deneme",
+  "folder": "topdenemeblue",
   "idealStartingState": {
     "velocity": 0,
-    "rotation": 141.34019174590998
+    "rotation": -59.35038449739252
   },
   "useDefaultConstraints": true
 }

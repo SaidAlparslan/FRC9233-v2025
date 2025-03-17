@@ -23,10 +23,10 @@ public class Arm extends SubsystemBase {
     //  ArmState Enum Tanımlandı
     public enum ArmState {
         NOTRINTAKEARM(0.0),
-        L1_L2_L3ARM(45.0),
-        L4ARM(60.0),
-        NETARM(80.0),
-        PROCESSORARM(180.0);
+        L1_L2_L3ARM(15.0),
+        L4ARM(35.0),
+        NETARM(90.0),
+        PROCESSORARM(150.0);
 
 
         private final double position; // Derece cinsinden konum
@@ -41,8 +41,8 @@ public class Arm extends SubsystemBase {
     }
 
     // Encoder dönüşüm faktörleri
-    private static final double GEAR_RATIO = 10.0; // 10:1 dişli oranı
-    private static final double POSITION_CONVERSION_FACTOR = 1.0 / 36.0; // 1 derece = 0.02778 rotations// BUNLARI DİŞLİYE GÖRE FLN AYARLİCAZ
+    private static final double GEAR_RATIO = (48*50*32)/(16*14*11); // yaklasik 31 dişli oranı
+    private static final double POSITION_CONVERSION_FACTOR = ((48*50*32)/(16*14*11))/ 360.0; // 1 derece = 0.0865 rotations// BUNLARI DİŞLİYE GÖRE FLN AYARLİCAZ
     private static final double VELOCITY_CONVERSION_FACTOR = POSITION_CONVERSION_FACTOR / 60.0; // Dakikadan saniyeye
 
     // Trapezoid Profil Sınırları
@@ -53,7 +53,7 @@ public class Arm extends SubsystemBase {
         armMotor = new SparkMax(Constants.ARM_MOTOR_ID, MotorType.kBrushless);
         SparkMaxConfig config = new SparkMaxConfig();
         
-        config.inverted(false).idleMode(IdleMode.kBrake).smartCurrentLimit(20);
+        config.inverted(false).idleMode(IdleMode.kBrake).smartCurrentLimit(40);
         config.encoder.positionConversionFactor(POSITION_CONVERSION_FACTOR)
                       .velocityConversionFactor(VELOCITY_CONVERSION_FACTOR);
 
@@ -89,7 +89,7 @@ public class Arm extends SubsystemBase {
         SmartDashboard.putNumber("Arm Encoder (Degrees)", getCurrentPosition());
         SmartDashboard.putNumber("Arm Target Position", targetState.getPosition());
 
-        if (!manualOverride) {
+        /*if (!manualOverride) {
             double currentPosition = getCurrentPosition();
             double pidOutput = pidController.calculate(currentPosition);
 
@@ -97,7 +97,7 @@ public class Arm extends SubsystemBase {
             pidOutput = Math.max(-1.0, Math.min(1.0, pidOutput));
 
             armMotor.set(pidOutput);
-        }
+        }*/
     }
 
     // Manuel hareket

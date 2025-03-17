@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 1.712928082191781,
-        "y": 7.323137842465753
+        "x": 1.6723496957839843,
+        "y": 7.299677113410207
       },
       "prevControl": null,
       "nextControl": {
-        "x": 2.712630277037924,
-        "y": 6.253119663741918
+        "x": 2.6720518906301276,
+        "y": 6.229658934686372
       },
       "isLocked": false,
       "linkedName": "BLUESOURCE"
     },
     {
       "anchor": {
-        "x": 3.646628289473684,
-        "y": 5.150740131578948
+        "x": 3.6551888884473915,
+        "y": 5.125337946249335
       },
       "prevControl": {
-        "x": 3.0228656514382033,
-        "y": 5.817378748620423
+        "x": 3.031426250411911,
+        "y": 5.7919765632908105
       },
       "nextControl": null,
       "isLocked": false,
@@ -29,7 +29,21 @@
     }
   ],
   "rotationTargets": [],
-  "constraintZones": [],
+  "constraintZones": [
+    {
+      "name": "yavaslama",
+      "minWaypointRelativePos": 0.5031055900621118,
+      "maxWaypointRelativePos": 1.0,
+      "constraints": {
+        "maxVelocity": 1.2,
+        "maxAcceleration": 2.0,
+        "maxAngularVelocity": 540.0,
+        "maxAngularAcceleration": 720.0,
+        "nominalVoltage": 12.0,
+        "unlimited": false
+      }
+    }
+  ],
   "pointTowardsZones": [],
   "eventMarkers": [
     {
@@ -40,7 +54,7 @@
     }
   ],
   "globalConstraints": {
-    "maxVelocity": 2.0,
+    "maxVelocity": 2.5,
     "maxAcceleration": 3.0,
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,
@@ -49,10 +63,10 @@
   },
   "goalEndState": {
     "velocity": 0,
-    "rotation": -56.10658053363472
+    "rotation": -59.35038449739252
   },
   "reversed": false,
-  "folder": "BlueSide",
+  "folder": "TopBlueSide",
   "idealStartingState": {
     "velocity": 0,
     "rotation": -53.53736103142317

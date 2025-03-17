@@ -42,28 +42,9 @@
           }
         },
         {
-          "type": "sequential",
+          "type": "named",
           "data": {
-            "commands": [
-              {
-                "type": "named",
-                "data": {
-                  "name": "StartIntake"
-                }
-              },
-              {
-                "type": "wait",
-                "data": {
-                  "waitTime": 0.5
-                }
-              },
-              {
-                "type": "named",
-                "data": {
-                  "name": "StopIntake"
-                }
-              }
-            ]
+            "name": "Intake"
           }
         },
         {
@@ -104,34 +85,15 @@
           }
         },
         {
-          "type": "sequential",
+          "type": "named",
           "data": {
-            "commands": [
-              {
-                "type": "named",
-                "data": {
-                  "name": "StartIntake"
-                }
-              },
-              {
-                "type": "wait",
-                "data": {
-                  "waitTime": 0.5
-                }
-              },
-              {
-                "type": "named",
-                "data": {
-                  "name": "StopIntake"
-                }
-              }
-            ]
+            "name": "Intake"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Source-B11(with l3elevator event)"
+            "pathName": "Source-B12(with l4elevator event)"
           }
         },
         {

@@ -3,25 +3,25 @@
   "waypoints": [
     {
       "anchor": {
-        "x": 5.063655821917808,
-        "y": 5.324721746575342
+        "x": 5.039097459651033,
+        "y": 5.299775433023164
       },
       "prevControl": null,
       "nextControl": {
-        "x": 4.6834135026137265,
-        "y": 5.63268472772985
+        "x": 4.658855140346951,
+        "y": 5.607738414177672
       },
       "isLocked": false,
       "linkedName": "B1"
     },
     {
       "anchor": {
-        "x": 1.712928082191781,
-        "y": 7.323137842465753
+        "x": 1.6723496957839843,
+        "y": 7.299677113410207
       },
       "prevControl": {
-        "x": 3.031573685221913,
-        "y": 6.545962437103156
+        "x": 2.9909952988141146,
+        "y": 6.52250170804761
       },
       "nextControl": null,
       "isLocked": false,
@@ -29,7 +29,21 @@
     }
   ],
   "rotationTargets": [],
-  "constraintZones": [],
+  "constraintZones": [
+    {
+      "name": "hizlanma",
+      "minWaypointRelativePos": 0.0,
+      "maxWaypointRelativePos": 0.40372670807453404,
+      "constraints": {
+        "maxVelocity": 1.2,
+        "maxAcceleration": 2.0,
+        "maxAngularVelocity": 540.0,
+        "maxAngularAcceleration": 720.0,
+        "nominalVoltage": 12.0,
+        "unlimited": false
+      }
+    }
+  ],
   "pointTowardsZones": [],
   "eventMarkers": [
     {
@@ -40,7 +54,7 @@
     }
   ],
   "globalConstraints": {
-    "maxVelocity": 2.0,
+    "maxVelocity": 2.5,
     "maxAcceleration": 3.0,
     "maxAngularVelocity": 540.0,
     "maxAngularAcceleration": 720.0,
@@ -52,7 +66,7 @@
     "rotation": -53.53736103142317
   },
   "reversed": false,
-  "folder": "BlueSide",
+  "folder": "TopBlueSide",
   "idealStartingState": {
     "velocity": 0,
     "rotation": -119.99999999999999
